@@ -1,0 +1,13 @@
+USE SQLShackDemo 
+GO
+CREATE VIEW DBO.Shipments_Info
+WITH SCHEMABINDING
+AS
+SELECT [Ship_Num],[Ship_CountryCode],[Ship_Date],[Ship_Quarter] FROM DBO.Shipments_Q1
+UNION ALL
+SELECT [Ship_Num],[Ship_CountryCode],[Ship_Date],[Ship_Quarter] FROM DBO.Shipments_Q2
+UNION ALL
+SELECT [Ship_Num],[Ship_CountryCode],[Ship_Date],[Ship_Quarter] FROM DBO.Shipments_Q3
+UNION ALL
+SELECT [Ship_Num],[Ship_CountryCode],[Ship_Date],[Ship_Quarter] FROM DBO.Shipments_Q4
+ 
