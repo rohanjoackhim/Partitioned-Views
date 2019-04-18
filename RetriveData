@@ -1,0 +1,8 @@
+SELECT * FROM DBO.Shipments_Q1
+GO
+SELECT * FROM DBO.Shipments_Q2
+GO
+SELECT * FROM DBO.Shipments_Q3
+GO
+SELECT * FROM DBO.Shipments_Q4
+GO
