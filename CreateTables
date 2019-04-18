@@ -1,0 +1,37 @@
+USE SQLShackDemo 
+GO
+CREATE TABLE Shipments_Q1 (
+Ship_Num INT NOT NULL,
+Ship_CountryCode CHAR(3) NOT NULL,
+Ship_Date DATETIME NULL,
+Ship_Quarter SMALLINT NOT NULL CONSTRAINT CK_Ship_Q1 CHECK (Ship_Quarter = 1),
+CONSTRAINT PK_Shipments_Q1 PRIMARY KEY (Ship_Num, Ship_Quarter)
+);
+ 
+GO
+CREATE TABLE Shipments_Q2 (
+Ship_Num INT NOT NULL,
+Ship_CountryCode CHAR(3) NOT NULL,
+Ship_Date DATETIME NULL,
+Ship_Quarter SMALLINT NOT NULL CONSTRAINT CK_Ship_Q2 CHECK (Ship_Quarter = 2),
+CONSTRAINT PK_Shipments_Q2 PRIMARY KEY (Ship_Num, Ship_Quarter)
+);
+ 
+GO
+CREATE TABLE Shipments_Q3 (
+Ship_Num INT NOT NULL,
+Ship_CountryCode CHAR(3) NOT NULL,
+Ship_Date DATETIME NULL,
+Ship_Quarter SMALLINT NOT NULL CONSTRAINT CK_Ship_Q3 CHECK (Ship_Quarter = 3),
+CONSTRAINT PK_Shipments_Q3 PRIMARY KEY (Ship_Num, Ship_Quarter)
+);
+ 
+GO
+CREATE TABLE Shipments_Q4 (
+Ship_Num INT NOT NULL,
+Ship_CountryCode CHAR(3) NOT NULL,
+Ship_Date DATETIME NULL,
+Ship_Quarter SMALLINT NOT NULL CONSTRAINT CK_Ship_Q4 CHECK (Ship_Quarter = 4),
+CONSTRAINT PK_Shipments_Q4 PRIMARY KEY (Ship_Num, Ship_Quarter)
+);
+ 
