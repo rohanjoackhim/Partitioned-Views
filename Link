@@ -1,1 +1,9 @@
 https://www.sqlshack.com/sql-server-partitioned-views/
+But if we search for the same data by filtering the Ship_Quarter partitioning column:
+SELECT * FROM DBO.Shipments_Info WHERE [Ship_Quarter] = 3
+Comparing the two queries performance by running it at the same time and enabling the STATISTICS TIME counter:
+SET STATISTICS TIME ON
+SELECT * FROM DBO.Shipments_Info WHERE [Ship_Num] = 1119
+GO
+SELECT * FROM DBO.Shipments_Info WHERE [Ship_Quarter] = 3
+SET STATISTICS TIME OFF
